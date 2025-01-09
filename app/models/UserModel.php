@@ -2,18 +2,15 @@
 
 class UserModel{
 
-    public function Autentification($username,$password){
- 
+    public function login($username,$password){
+        
+
+        
      
  
  
 
-// Check if form data is submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
-    try {
 
         // Query to check if the user exists
         $query = "SELECT * FROM User WHERE username = :username";

@@ -12,6 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
 }
+
+ $login = new UserModel ;
+ $login->login($username,$password)
 ?>
 <h2>Login</h2>
 <!-- TODO: Add login form with input fields for username and password -->
