@@ -3,14 +3,7 @@
 class UserModel{
 
     public function login($username,$password){
-        
-
-        
-     
  
- 
-
-
 
         // Query to check if the user exists
         $query = "SELECT * FROM User WHERE username = :username";
@@ -35,17 +28,11 @@ class UserModel{
             header("Location: ../../views/auth/login.php");
             exit();
         }
-    } catch (PDOException $e) {
-        // Handle database errors
-        echo "Error: " . $e->getMessage();
+
+} 
+
     }
-} else {
-    // Redirect if accessed without form submission
-    // header("Location: ../../views/auth/login.php");
-    // exit();
-}
-    }
-}
+
 
 ?>
 
